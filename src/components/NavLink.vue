@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 defineProps({
   url: {
     type: String,
@@ -8,11 +9,6 @@ defineProps({
   text: {
     type: String,
     required: true,
-  },
-  isActive: {
-    type: Boolean,
-    required: false,
-    default: false,
   },
   isDisabled: {
     type: Boolean,
@@ -24,14 +20,15 @@ defineProps({
 
 <template>
   <li class="nav-item">
-    <a
+    <RouterLink
       class="nav-link"
-      :class="{ active: isActive, disabled: isDisabled }"
+      :class="{ disabled: isDisabled }"
+      activeClass="active"
       aria-current="page"
-      :href="url"
+      :to="url"
       :disabled="isDisabled"
       :aria-disabled="isDisabled"
-      >{{ text }}</a
+      >{{ text }}</RouterLink
     >
   </li>
 </template>

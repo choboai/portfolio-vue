@@ -1,6 +1,6 @@
 <script setup>
-import Nav from './Nav.vue';
-import Footer from './Footer.vue';
+import Nav from '../components/Nav.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
@@ -9,19 +9,12 @@ import Footer from './Footer.vue';
       <Nav />
     </header>
 
-    <main class="flex-shrink-0 py-5">
+    <main class="flex-shrink-0 pb-5">
       <div class="container">
-        <slot name="title" />
-        <slot name="content" />
+        <slot />
       </div>
     </main>
 
     <Footer />
   </div>
 </template>
-
-<style>
-#app {
-  height: 100vh;
-}
-</style>

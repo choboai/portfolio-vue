@@ -1,11 +1,12 @@
 <script setup>
 import NavLink from './NavLink.vue';
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
+      <RouterLink class="navbar-brand" to="/">Mon site</RouterLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,19 +20,9 @@ import NavLink from './NavLink.vue';
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <NavLink url="#" text="Home" :isActive="true" />
-          <NavLink url="#" text="Link" />
-          <NavLink text="Disabled" :isDisabled="true" />
+          <NavLink url="/" text="Accueil" />
+          <NavLink url="/about" text="À propos" />
         </ul>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
