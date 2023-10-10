@@ -1,6 +1,6 @@
 <script setup>
-import NavLink from './NavLink.vue';
-import { RouterLink } from 'vue-router';
+import NavLink from "./NavLink.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
@@ -21,6 +21,7 @@ import { RouterLink } from 'vue-router';
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <NavLink url="/" text="Accueil" />
+          <NavLink url="/projects" text="Projets" />
           <NavLink url="/about" text="À propos" />
         </ul>
       </div>
